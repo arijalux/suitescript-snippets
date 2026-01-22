@@ -1,16 +1,18 @@
-# SuiteScript 2.1 Code Snippets
+# SuiteScript Code Snippets
 
 **Author:** Clemen Canaria  
 **Email:** ccanaria [at] gmail [dot] com | clemen [at] canariawerx [dot] com  
 **Organization:** CanariaWerx
 
-A comprehensive collection of VS Code snippets for NetSuite SuiteScript 2.1 development using ECMA 6 syntax.
+A comprehensive collection of VS Code snippets for NetSuite SuiteScript development, supporting both SuiteScript 1.0 and SuiteScript 2.1.
 
 ## Features
 
-This extension provides code snippets for all major SuiteScript 2.1 script types and common patterns:
+This extension provides code snippets for all major SuiteScript script types and common patterns, supporting both SuiteScript 1.0 and 2.1.
 
-### Script Types
+### SuiteScript 2.1 (ECMA 6 Syntax)
+
+#### Script Types
 - **RESTlet** (`ss21-restlet`) - Complete RESTlet with GET, POST, PUT, DELETE handlers
 - **Suitelet** (`ss21-suitelet`) - Suitelet with GET and POST request handling
 - **User Event** (`ss21-userevent`) - User Event Script with beforeLoad, beforeSubmit, afterSubmit
@@ -23,7 +25,7 @@ This extension provides code snippets for all major SuiteScript 2.1 script types
 - **Bundle Installation** (`ss21-bundleinstall`) - Bundle Installation Script template
 - **Module** (`ss21-module`) - Reusable module template
 
-### Helper Snippets
+#### Helper Snippets
 - **Search** (`ss21-search`) - Create and execute a search
 - **Record Load** (`ss21-record-load`) - Load a record
 - **Record Create** (`ss21-record-create`) - Create a new record
@@ -32,15 +34,56 @@ This extension provides code snippets for all major SuiteScript 2.1 script types
 - **Console Log** (`ss21-console-log`) - Console log message
 - **Console Error** (`ss21-console-error`) - Console error message
 
+### SuiteScript 1.0 (Legacy Syntax)
+
+#### Script Types
+- **RESTlet** (`ss10-restlet`) - RESTlet with GET, POST, PUT, DELETE handlers
+- **Suitelet** (`ss10-suitelet`) - Suitelet with GET and POST handling
+- **User Event - Before Load** (`ss10-userevent-beforeload`) - Before Load event handler
+- **User Event - Before Submit** (`ss10-userevent-beforesubmit`) - Before Submit event handler
+- **User Event - After Submit** (`ss10-userevent-aftersubmit`) - After Submit event handler
+- **User Event - Full** (`ss10-userevent`) - Complete User Event with all handlers
+- **Scheduled Script** (`ss10-scheduled`) - Scheduled Script template
+- **Client Script** (`ss10-client`) - Client Script with all event handlers
+- **Portlet** (`ss10-portlet`) - Portlet Script template
+- **Mass Update** (`ss10-massupdate`) - Mass Update Script template
+- **Workflow Action** (`ss10-workflowaction`) - Workflow Action Script template
+- **Bundle Installation** (`ss10-bundleinstall`) - Bundle Installation Script template
+
+#### Helper Snippets
+- **Search** (`ss10-search`) - Create and execute a search with pagination
+- **Search - Simple** (`ss10-search-simple`) - Simple search without pagination
+- **Record Load** (`ss10-record-load`) - Load a record
+- **Record Create** (`ss10-record-create`) - Create a new record
+- **Get Field Value** (`ss10-getfield`) - Get field value
+- **Set Field Value** (`ss10-setfield`) - Set field value
+- **Get Line Item Value** (`ss10-getlineitem`) - Get sublist line item value
+- **Set Line Item Value** (`ss10-setlineitem`) - Set sublist line item value
+- **HTTP Request** (`ss10-http-request`) - Make an HTTP request
+- **Schedule Script** (`ss10-schedule-script`) - Schedule a script to run
+- **Submit Field** (`ss10-submit-field`) - Submit a single field value
+- **Lookup Field** (`ss10-lookup-field`) - Lookup field without loading record
+- **Transform Record** (`ss10-transform-record`) - Transform one record to another
+- **Log Execution** (`ss10-log`) - Log execution message
+- **Try-Catch** (`ss10-try-catch`) - Try-catch block with error handling
+- **Get Context** (`ss10-get-context`) - Get execution context
+- **Get User** (`ss10-get-user`) - Get current user ID
+- **Get Role** (`ss10-get-role`) - Get current role ID
+- **Alert** (`ss10-alert`) - Show alert dialog (client-side)
+- **Confirm** (`ss10-confirm`) - Show confirmation dialog (client-side)
+
 ## Usage
 
 1. Open a JavaScript file in VS Code
-2. Start typing the snippet prefix (e.g., `ss21-restlet`)
+2. Start typing the snippet prefix:
+   - For SuiteScript 2.1: `ss21-` (e.g., `ss21-restlet`)
+   - For SuiteScript 1.0: `ss10-` (e.g., `ss10-restlet`)
 3. Press `Tab` or `Enter` to insert the snippet
 4. Use `Tab` to navigate through placeholders
 
-## Example
+## Examples
 
+### SuiteScript 2.1
 Type `ss21-restlet` and press Tab to insert:
 
 ```javascript
@@ -71,14 +114,41 @@ define([], () => {
 });
 ```
 
-## Features
+### SuiteScript 1.0
+Type `ss10-restlet` and press Tab to insert:
 
-- ✅ ECMA 6 syntax (arrow functions, const/let, destructuring)
-- ✅ JSDoc annotations for better IntelliSense
-- ✅ No log module dependencies (uses console for client-side)
-- ✅ Tab stops for quick navigation
-- ✅ Proper error handling patterns
-- ✅ @author tag for attribution
+```javascript
+/**
+ * RESTlet Name
+ * @author Your Name
+ */
+
+/**
+ * GET request handler
+ * @param {Object} datain - Request parameters
+ * @returns {Object} Response object
+ */
+function get(datain) {
+    try {
+        
+        return { success: true, data: {} };
+    } catch (e) {
+        return { success: false, error: e.toString() };
+    }
+}
+
+// ... more handlers
+```
+
+## Key Features
+
+- ✅ **Dual Version Support** - Both SuiteScript 1.0 and 2.1
+- ✅ **Modern Syntax** - ECMA 6 for SuiteScript 2.1 (arrow functions, const/let, destructuring)
+- ✅ **Legacy Support** - Traditional function syntax for SuiteScript 1.0
+- ✅ **JSDoc Annotations** - Better IntelliSense and code documentation
+- ✅ **Tab Stops** - Quick navigation through placeholders
+- ✅ **Error Handling** - Proper try-catch patterns included
+- ✅ **Attribution** - @author tag for code ownership
 
 ## Requirements
 
@@ -130,36 +200,35 @@ If the snippet dropdown doesn't appear automatically:
 - Start typing the snippet prefix more completely
 
 ### Available Snippet Prefixes
-All snippets start with `ss21-` followed by the script type or function:
 
-**Script Types:**
-- `ss21-restlet` - RESTlet script
-- `ss21-suitelet` - Suitelet script
-- `ss21-userevent` - User Event script
-- `ss21-mapreduce` - Map/Reduce script
-- `ss21-scheduled` - Scheduled script
-- `ss21-client` - Client script
-- `ss21-portlet` - Portlet script
-- `ss21-massupdate` - Mass Update script
-- `ss21-workflowaction` - Workflow Action script
-- `ss21-bundleinstall` - Bundle Installation script
-- `ss21-module` - Reusable module
+**SuiteScript 2.1** - All snippets start with `ss21-`:
+- `ss21-restlet`, `ss21-suitelet`, `ss21-userevent`, `ss21-mapreduce`
+- `ss21-scheduled`, `ss21-client`, `ss21-portlet`, `ss21-massupdate`
+- `ss21-workflowaction`, `ss21-bundleinstall`, `ss21-module`
+- `ss21-search`, `ss21-record-load`, `ss21-record-create`
+- `ss21-http-request`, `ss21-try-catch`
+- `ss21-console-log`, `ss21-console-error`
 
-**Helper Functions:**
-- `ss21-search` - Search creation and execution
-- `ss21-record-load` - Load a record
-- `ss21-record-create` - Create a new record
-- `ss21-http-request` - HTTP request
-- `ss21-try-catch` - Try-catch block
-- `ss21-console-log` - Console log
-- `ss21-console-error` - Console error
+**SuiteScript 1.0** - All snippets start with `ss10-`:
+- `ss10-restlet`, `ss10-suitelet`, `ss10-userevent`
+- `ss10-userevent-beforeload`, `ss10-userevent-beforesubmit`, `ss10-userevent-aftersubmit`
+- `ss10-scheduled`, `ss10-client`, `ss10-portlet`, `ss10-massupdate`
+- `ss10-workflowaction`, `ss10-bundleinstall`
+- `ss10-search`, `ss10-search-simple`, `ss10-record-load`, `ss10-record-create`
+- `ss10-getfield`, `ss10-setfield`, `ss10-getlineitem`, `ss10-setlineitem`
+- `ss10-http-request`, `ss10-schedule-script`, `ss10-submit-field`
+- `ss10-lookup-field`, `ss10-transform-record`, `ss10-log`, `ss10-try-catch`
+- `ss10-get-context`, `ss10-get-user`, `ss10-get-role`
+- `ss10-alert`, `ss10-confirm`
 
 ### Tips for Maximum Productivity
 - **Enable Tab Completion**: Ensure tab completion is enabled in VS Code settings
   - Go to `File > Preferences > Settings` (or `Code > Preferences > Settings` on Mac)
   - Search for "tab completion"
   - Set `editor.tabCompletion` to `on` or `onlySnippets`
-- **View All Snippets**: Type `ss21-` and press `Ctrl+Space` to see all available snippets
+- **View All Snippets**: 
+  - Type `ss21-` and press `Ctrl+Space` for SuiteScript 2.1 snippets
+  - Type `ss10-` and press `Ctrl+Space` for SuiteScript 1.0 snippets
 - **Customize Snippets**: You can modify snippets in VS Code by going to `File > Preferences > Configure User Snippets > javascript.json`
 - **Use Multi-Cursor**: Use `Alt+Click` (Windows/Linux) or `Option+Click` (Mac) to edit multiple placeholders simultaneously
 
@@ -188,6 +257,10 @@ See the [LICENSE](LICENSE) file for full details.
 📧 ccanaria [at] gmail [dot] com | clemen [at] canariawerx [dot] com
 
 ## Release Notes
+
+### 1.1.0
+
+Added complete SuiteScript 1.0 support with 30+ snippets for legacy script development.
 
 ### 1.0.0
 

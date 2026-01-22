@@ -1,6 +1,29 @@
 # Change Log
 
-All notable changes to the "SuiteScript 2.1 Snippets" extension will be documented in this file.
+All notable changes to the "SuiteScript Snippets" extension will be documented in this file.
+
+## [1.1.0] - 2026-01-22
+
+### Added
+- Complete SuiteScript 1.0 support with 30+ new snippets
+- All major SuiteScript 1.0 script types (RESTlet, Suitelet, User Event, Scheduled, Client, etc.)
+- SuiteScript 1.0 User Event individual entry point snippets (beforeLoad, beforeSubmit, afterSubmit)
+- Comprehensive SuiteScript 1.0 helper snippets:
+  - Search with pagination and simple search
+  - Record operations (load, create, transform)
+  - Field operations (get/set field values, line items)
+  - HTTP requests using nlapiRequestURL
+  - Script scheduling and field utilities
+  - Logging and error handling
+  - Context, user, and role information
+  - Client-side dialogs (alert, confirm)
+- All SuiteScript 1.0 snippets use `ss10-` prefix for easy identification
+- Traditional function syntax for legacy compatibility
+
+### Changed
+- Extension name updated to reflect dual version support
+- Package name changed from `canariawerx-suitescript-2-1-snippets` to `canariawerx-suitescript-snippets`
+- Updated documentation to clearly separate SuiteScript 1.0 and 2.1 snippets
 
 ## [1.0.0] - 2026-01-22
 
