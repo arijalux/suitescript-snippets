@@ -1,0 +1,30 @@
+Custom Source-Available License
+
+Copyright (c) 2026 Clemen Canaria
+
+TERMS AND CONDITIONS:
+
+1. PERMITTED USES:
+   - You may fork this repository on GitHub or similar platforms
+   - You may modify your forked version for personal or commercial use
+   - You may use this software in your own projects
+
+2. RESTRICTIONS:
+   - You may NOT create standalone copies or redistributions of this software
+   - You may NOT republish this software as your own work
+   - Modified versions must maintain clear attribution to the original author
+   - Any public forks or derivatives must link back to the original repository
+
+3. ATTRIBUTION REQUIREMENT:
+   - All forks and derivatives must retain this license
+   - All forks and derivatives must credit: Clemen Canaria / CanariaWerx
+   - Original repository: https://github.com/ccanaria/suitescript-snippets
+
+4. WARRANTY DISCLAIMER:
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+   SOFTWARE.

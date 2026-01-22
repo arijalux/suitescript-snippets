@@ -1,0 +1,35 @@
+{
+  "name": "canariawerx-suitescript-2-1-snippets",
+  "displayName": "CanariaWerx SuiteScript 2.1 Snippets",
+  "description": "Code snippets for NetSuite SuiteScript 2.1 development using ECMA 6 syntax",
+  "version": "1.0.0",
+  "publisher": "canariawerx",
+  "author": "Clemen Canaria <clemen@canariawerx.com> (https://clemen.canariawerx.com)",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "netsuite",
+    "suitescript",
+    "suitescript2.1",
+    "javascript",
+    "ecma6",
+    "snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/suitescript-2.1.code-snippets"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/canariawerx/suitescript-snippets"
+  },
+  "license": "GPL-3.0"
+}
